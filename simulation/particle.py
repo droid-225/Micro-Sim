@@ -9,7 +9,8 @@ from settings import (
     COLOR_NEGATIVE,
     COLOR_NEUTRAL,
     COLOR_POSITIVE,
-    PARTICLE_MASS,
+    POSITIVE_PARTICLE_MASS,
+    NEGATIVE_PARTICLE_MASS,
     PARTICLE_RADIUS,
 )
 
@@ -24,7 +25,7 @@ class Particle:
     position: pygame.Vector2
     velocity: pygame.Vector2
     radius: int = PARTICLE_RADIUS
-    mass: float = PARTICLE_MASS
+    mass: float = POSITIVE_PARTICLE_MASS
     id_counter: ClassVar[int] = 0
     color_override: Tuple[int, int, int] | None = None
 
@@ -41,6 +42,7 @@ class Particle:
         if self.charge > 0:
             return COLOR_POSITIVE
         if self.charge < 0:
+            self.mass = NEGATIVE_PARTICLE_MASS
             return COLOR_NEGATIVE
         return COLOR_NEUTRAL
 
@@ -89,7 +91,8 @@ class Particle:
         scaled_radius = max(4, int(self.radius * zoom))
 
         pygame.draw.circle(surface, self.color, screen_pos, scaled_radius)
-        label = font.render(str(self.id), True, (255, 255, 255))
+        #label = font.render(str(self.id), True, (255, 255, 255))
+        label = font.render("+" if self.charge > 0 else "-", True, (255, 255, 255))
         label_rect = label.get_rect(center=screen_pos)
         surface.blit(label, label_rect)
 

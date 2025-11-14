@@ -13,7 +13,8 @@ PANEL_WIDTH = WINDOW_WIDTH - SIMULATION_WIDTH
 
 # Particle defaults
 PARTICLE_RADIUS = 12
-PARTICLE_MASS = 1.0
+POSITIVE_PARTICLE_MASS = 1836.0 # 1863:1 irl raio
+NEGATIVE_PARTICLE_MASS = 1.0
 PARTICLE_SPEED_RANGE = (-30, 30)  # pixels per second initial velocity
 PARTICLE_MIN_DISTANCE = PARTICLE_RADIUS * 2
 
@@ -21,9 +22,9 @@ PARTICLE_MIN_DISTANCE = PARTICLE_RADIUS * 2
 COULOMB_CONSTANT = 6000.0
 DAMPING = 0.99  # mild damping to keep system stable
 MAX_FORCE = 2000.0  # clamp extreme forces to maintain stability
-RESTITUTION = 0.9  # energy retention for elastic collisions
-BOND_FORCE_THRESHOLD = 1500.0  # minimum attractive force magnitude to bond
-REPULSION_MULTIPLIER = 1.0  # amplify repulsion for like charges
+RESTITUTION = 0.5  # energy retention for elastic collisions
+BOND_FORCE_THRESHOLD = 1000.0  # minimum attractive force magnitude to bond
+REPULSION_MULTIPLIER = 10.0  # amplify repulsion for like charges
 MIN_CHARGE_STRENGTH = 1.0
 MAX_CHARGE_STRENGTH = 100.0
 MIN_TIME_SCALE = 0.25
@@ -45,8 +46,8 @@ COLOR_BUTTON = (70, 90, 140)
 COLOR_BUTTON_HOVER = (90, 110, 170)
 COLOR_SLIDER_TRACK = (80, 80, 120)
 COLOR_SLIDER_HANDLE = (200, 200, 220)
-COLOR_POSITIVE = (220, 80, 80)
-COLOR_NEGATIVE = (60, 120, 220)
+COLOR_POSITIVE = (60, 120, 220) 
+COLOR_NEGATIVE = (220, 80, 80)
 COLOR_NEUTRAL = (200, 200, 200)
 
 # Fonts
