@@ -147,8 +147,8 @@ class Simulation:
                     force_magnitude *= REPULSION_MULTIPLIER
                 force_vector = direction * force_magnitude
 
-                if force_vector.length() > MAX_FORCE:
-                    force_vector.scale_to_length(MAX_FORCE)
+                #if force_vector.length() > MAX_FORCE:
+                #    force_vector.scale_to_length(MAX_FORCE)
 
                 forces[i] += force_vector
                 forces[j] -= force_vector
