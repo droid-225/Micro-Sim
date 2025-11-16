@@ -19,7 +19,7 @@ PARTICLE_SPEED_RANGE = (-30, 30)  # pixels per second initial velocity
 PARTICLE_MIN_DISTANCE = PARTICLE_RADIUS * 2
 
 # Physics constants
-COULOMB_CONSTANT = 10000 # 9 x 10^9 in SI units irl
+CHARGE_CONSTANT = 10000
 DAMPING = 0.99  # mild damping to keep system stable
 MAX_FORCE = 2000.0  # clamp extreme forces to maintain stability
 RESTITUTION = 0.5  # energy retention for elastic collisions

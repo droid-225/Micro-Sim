@@ -8,7 +8,7 @@ import pygame
 
 from settings import (
     BOND_FORCE_THRESHOLD,
-    COULOMB_CONSTANT,
+    CHARGE_CONSTANT,
     DEFAULT_CHARGE_STRENGTH,
     DEFAULT_MAX_PARTICLES,
     DEFAULT_SPAWN_COUNT,
@@ -137,7 +137,7 @@ class Simulation:
                     direction = delta / distance
 
                 force_magnitude = (
-                    COULOMB_CONSTANT
+                    CHARGE_CONSTANT
                     * self.charge_strength
                     * a.charge
                     * b.charge
