@@ -54,7 +54,7 @@ class ControlPanel:
             MAX_CHARGE_STRENGTH,
             simulation.charge_strength,
             simulation.set_charge_strength,
-            format_value=lambda v: f"{v:.2f}x",
+            format_value=lambda v: f"{v:.2f}",
             label="Charge Strength",
         )
         self.widgets.append(self.charge_slider)

@@ -19,14 +19,13 @@ PARTICLE_SPEED_RANGE = (-30, 30)  # pixels per second initial velocity
 PARTICLE_MIN_DISTANCE = PARTICLE_RADIUS * 2
 
 # Physics constants
-CHARGE_CONSTANT = 10000
 DAMPING = 0.99  # mild damping to keep system stable
 MAX_FORCE = 2000.0  # clamp extreme forces to maintain stability
 RESTITUTION = 0.5  # energy retention for elastic collisions
 BOND_FORCE_THRESHOLD = 1000.0  # minimum attractive force magnitude to bond
 REPULSION_MULTIPLIER = 1.0  # amplify repulsion for like charges
-MIN_CHARGE_STRENGTH = 1.0
-MAX_CHARGE_STRENGTH = 100.0
+MIN_CHARGE_STRENGTH = 0
+MAX_CHARGE_STRENGTH = 1000000.0
 MIN_TIME_SCALE = 0.25
 MAX_TIME_SCALE = 10.0
 
